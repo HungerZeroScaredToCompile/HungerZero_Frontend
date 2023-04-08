@@ -20,6 +20,7 @@ module.exports = {
         silver: "#c7c7c7",
         orange: "#fbbc05",
         lightcyan:"#DAFFF6",
+        
       },
       fontFamily: {
         poppins: "Poppins",
