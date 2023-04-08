@@ -10,6 +10,7 @@ import Community from "./pages/Community";
 import Donations from "./pages/Donations";
 import UserProfile from "./pages/UserProfile";
 import Reward from "./pages/Reward";
+import NGOFeedback from "./pages/NGOFeedback";
 import { useEffect } from "react";
 import { useState } from "react";
 
@@ -59,6 +60,7 @@ function App() {
       <Route
        path="userprofile" element={<UserProfile />} />
        <Route path="reward" element={<Reward />} />
+       <Route path="feedback" element={<NGOFeedback />} />
     </Routes>
   );
 }

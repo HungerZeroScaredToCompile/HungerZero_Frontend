@@ -133,7 +133,7 @@ const Reward = () => {
           <div className="absolute top-[40px] left-[115px] text-5xl font-kumbh-sans text-gray-200 text-left flex items-center w-[234px]">
             HungerZero
           </div>
-          <div className="absolute top-[44px] left-[964px] text-mini font-poppins text-black text-left flex items-center w-[110px]">
+          <div className="absolute top-[44px] left-[984px] text-mini font-poppins text-black text-left flex items-center w-[110px]">
             Donation
           </div>
           <div className="absolute top-[44px] left-[1096px] text-mini font-poppins text-gray-200 text-left flex items-center w-[110px]">
