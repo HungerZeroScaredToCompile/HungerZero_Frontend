@@ -8,6 +8,7 @@ import LandingPage from "./pages/LandingPage";
 import ContactUs from "./pages/ContactUs";
 import Community from "./pages/Community";
 import Donations from "./pages/Donations";
+import UserProfile from "./pages/UserProfile";
 import { useEffect } from "react";
 import { useState } from "react";
 
@@ -54,6 +55,7 @@ function App() {
       <Route path="contact" element={<ContactUs />} />
       <Route path="community" element={<Community />} />
       <Route path="donations" element={<Donations />} />
+      <Route path="userprofile" element={<UserProfile />} />
     </Routes>
   );
 }
