@@ -13,8 +13,18 @@ import Reward from "./pages/Reward";
 import NGOFeedback from "./pages/NGOFeedback";
 import NotificationUser from "./pages/NotificationUser";
 import NotificationNgo from "./pages/NotificationNgo";
+import NgoMaps from "./pages/NgoMaps";
+import Calendar from "./pages/Calendar";
+import UserHome from "./pages/UserHome";
+import UserLogin from "./pages/UserLogin";
+import UserRegister from "./pages/UserRegister";
+import NgoLogin from "./pages/NgoLogin";
+import NgoRegister from "./pages/NgoRegister";
+import PrivateRoute from "./pages/PrivateRoute";
+import NgoHome from "./pages/NgoHome";
 import { useEffect } from "react";
 import { useState } from "react";
+import { LoginContext } from "./Contexts/LoginContext";
 
 
 function App() {
@@ -53,20 +63,43 @@ function App() {
     }
   }, [pathname]);
 
+  const [logged, setLogged]= useState(false);
+  const [username, setUsername]= useState("")
+
   return (
+    
+    <LoginContext.Provider value={{setUsername, username, logged, setLogged}}>
     <Routes>
       <Route path="/" element={<LandingPage />} />
+
+      <Route path={'/userregister'} element={<UserRegister/>}/>
+      <Route path={'/userlogin'} element={<UserLogin/>}/>
+     
+      <Route path={'/ngoregister'} element={<NgoRegister/>}/>
+      <Route path={'/ngologin'} element={<NgoLogin/>}/>
+
+      <Route element={<PrivateRoute isLoggedIn={logged}/>}>
+      <Route path={'/userhome'} element={<UserHome/>}/>
+        <Route path={'/ngohome'} element={<NgoHome/>}/>
+        <Route path={'/ngomaps'} element={<NgoMaps/>}/>
+        <Route path={'/calendar'} element={<Calendar/>}/>
       <Route path="contact" element={<ContactUs />} />
       <Route path="community" element={<Community />} />
       <Route path="donations" element={<Donations />} />
       <Route
-       path="userprofile" element={<UserProfile />} />
+       path={'/userprofile'} element={<UserProfile />} />
        <Route path="reward" element={<Reward />} />
        <Route
         path="feedback" element={<NGOFeedback />} />
          <Route path="notificationuser" element={<NotificationUser/>} />
          <Route path="notificationngo" element={<NotificationNgo/>} />
+          
+      </Route>
+
     </Routes>
+    </LoginContext.Provider>
+    
+    
   );
 }
 export default App;

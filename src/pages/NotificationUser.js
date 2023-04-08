@@ -1,5 +1,21 @@
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+
 const NotificationUser = () => {
+  // const [notifications, setNotifications] = useState([]);
+
+  // useEffect(() => {
+  //   axios.get('https://rishh.pythonanywhere.com/user/notifications/list')
+  //     .then(response => {
+  //       setNotifications(response.data);
+  //     })
+  //     .catch(error => {
+  //       console.error('Error fetching notifications:', error);
+  //     });
+  // }, []);
+
   return (
+    
     <div className="relative bg-whitesmoke-100 w-full h-[1144px] overflow-hidden text-left text-sm text-darkslateblue-100 font-poppins">
       <b className="absolute top-[189px] left-[57px] text-45xl flex font-playfair-display text-seagreen-100 items-center w-[1170px] h-[89px]"style={{fontSize: "50px"}}>
         Notifications

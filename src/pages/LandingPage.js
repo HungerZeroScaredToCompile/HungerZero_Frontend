@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const LandingPage = () => {
   return (
     <div className="relative bg-whitesmoke-100 w-full h-[2648px] overflow-hidden text-left text-lg text-gray-200 font-poppins">
@@ -11,7 +13,7 @@ const LandingPage = () => {
       <div className="absolute top-[40px] left-[115px] text-5xl font-kumbh-sans flex items-center w-[234px]">
         HungerZero
       </div>
-      <div className="absolute top-[44px] left-[616px] text-mini flex items-center w-[55px]">
+      {/* <div className="absolute top-[44px] left-[616px] text-mini flex items-center w-[55px]">
         Home
       </div>
       <div className="absolute top-[44px] left-[756px] text-mini flex items-center w-[84px]">
@@ -19,7 +21,7 @@ const LandingPage = () => {
       </div>
       <div className="absolute top-[44px] left-[902px] text-mini flex items-center w-[94px]">
         Contact
-      </div>
+      </div> */}
       <div className="absolute top-[382px] left-[125px] text-29xl font-semibold text-seagreen-100 flex items-center w-[45px]">
         12
       </div>
@@ -50,19 +52,20 @@ const LandingPage = () => {
         </span>
       </div>
       <div className="absolute top-[445px] left-[360px] box-border w-0.5 h-[92px] border-r-[2px] border-solid border-silver" />
-      <button className="absolute top-[586px] left-[124px] z-10 rounded-3xs bg-seagreen-100 shadow-[0px_0px_8px_2px_rgba(6,_144,_111,_0.5)] w-[225px] h-[52px] text-base flex font-kumbh-sans text-whitesmoke-100 font-bold text-center items-center justify-center w-[229px] hover:cursor-pointer" >
+  <Link to={"/userregister"} > <button className="absolute top-[586px] left-[124px] z-10 rounded-3xs bg-seagreen-100 shadow-[0px_0px_8px_2px_rgba(6,_144,_111,_0.5)] w-[225px] h-[52px] text-base flex font-kumbh-sans text-whitesmoke-100 font-bold text-center items-center justify-center w-[229px] hover:cursor-pointer" >
      
-        Are you a donor?
-    </button>
+     Are you a donor?
+ </button></Link>  
       <button className="absolute top-[29px] left-[1069px] z-10 rounded-3xs bg-seagreen-100 shadow-[0px_0px_8px_2px_rgba(6,_144,_111,_0.5)] w-[165px] h-[52px] hover:cursor-pointer text-base flex font-kumbh-sans font-bold text-whitesmoke-100 text-center items-center justify-center w-[167px]">
   Donate Now
 </button>
 
-<button className="absolute top-[586px] left-[374px] z-10 rounded-3xs font-bold box-border w-[225px] h-[52px] border-[2px] border-solid border-seagreen-100 text-base flex font-kumbh-sans text-seagreen-100 text-center items-center justify-center w-[229px] hover:cursor-pointer bg-transparent">
+<Link to={"/ngoregister"}><button className="absolute top-[586px] left-[374px] z-10 rounded-3xs font-bold box-border w-[225px] h-[52px] border-[2px] border-solid border-seagreen-100 text-base flex font-kumbh-sans text-seagreen-100 text-center items-center justify-center w-[229px] hover:cursor-pointer bg-transparent">
     Are you a NGO?
-</button>
+</button></Link>
 
-      <div className="absolute top-[2349px] left-[615px] text-3xl font-semibold font-inter text-white">
+
+      {/* <div className="absolute top-[2349px] left-[615px] text-3xl font-semibold font-inter text-white">
         Home
       </div>
       <div className="absolute top-[2349px] left-[796px] text-3xl font-semibold font-inter text-white">
@@ -70,7 +73,7 @@ const LandingPage = () => {
       </div>
       <div className="absolute top-[2349px] left-[1013px] text-3xl font-semibold font-inter text-white">
         Contact
-      </div>
+      </div> */}
       <div className="absolute top-[2388px] left-[190px] leading-[33px] font-inter text-white inline-block w-[275px]">
         Give the gift of nourishment. Donate food and help end food insecurity
       </div>

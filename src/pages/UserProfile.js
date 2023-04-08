@@ -1,4 +1,26 @@
+import React, {useEffect, useContext, useState} from 'react';
+import { useParams } from "react-router-dom";
+import { LoginContext } from '../Contexts/LoginContext';
+import axios from 'axios';
+
 const UserProfile = () => {
+
+  const {username, setUsername}= useContext(LoginContext)
+  const { setLogged}= useContext(LoginContext)
+  const [profile, setProfile] = useState({});
+  // const {username}=useParams()
+
+  useEffect(() => {
+    axios.get(`http://127.0.0.1:8000/LoginReg/users/${username}/`)
+      .then(response => {
+        setProfile(response.data);
+        console.log(response.data)
+      })
+      .catch(error => {
+        console.log(error);
+      });
+  }, []);
+
     return (
       <div className="relative bg-whitesmoke-100 w-full h-[1318px] overflow-hidden text-left text-smi text-black font-poppins">
         <div className="absolute top-[232px] left-[56px] rounded-3xs bg-white w-[1361px] h-[997px]" />
@@ -12,8 +34,8 @@ const UserProfile = () => {
           alt=""
           src="/ellipse@2x.png"
         />
-        <b className="absolute top-[452px] left-[115px] text-5xl flex text-darkslateblue-100 items-center w-[279px] h-[37px]">
-          shubham_mehtaa
+        <b className="absolute top-[452px] ml-12 left-[115px] text-5xl flex text-darkslateblue-100 items-center w-[279px] h-[37px]">
+   {username}
         </b>
         <b className="absolute top-[135px] left-[68px] text-45xl flex font-playfair-display text-seagreen-100 items-center w-[508px] h-[89px] "style={{fontSize: "50px"}}>
           Profile
@@ -21,18 +43,17 @@ const UserProfile = () => {
         <div className="absolute top-[277px] left-[430px] w-[664px] h-[222px] text-5xl text-gray-200">
           <b className="absolute top-[0px] left-[0px] flex items-center w-[591.79px] h-[70px]">
             <span className="[line-break:anywhere] w-full">
-              <p className="m-0">Shubham Mehta</p>
+              <p className="m-0">{profile.First_name} {profile.Last_name}</p>
             </span>
           </b>
           <div className="absolute top-[54px] left-[0px] flex items-center w-[280.04px] h-[31px]">
-            shubham@gmail.com
+          {profile.email}
           </div>
           <div className="absolute top-[78px] left-[0px] flex items-center w-[352.25px] h-[85px]">
-            8369005673
+           {profile.phone}
           </div>
           <div className="absolute top-[149px] left-[0px] flex items-center w-[664px] h-[73px]">
-            Address: Mona Apts, J.P Road, Navrang Cinema, Andheri West,
-            Mumbai, Maharashtra 400058
+            {profile.address}
           </div>
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.626211079287!2d72.839281774875!3d19.124047182090436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c9d70fae92fd%3A0x92ae08c1e86a0631!2sMona%20Apartment!5e0!3m2!1sen!2sin!4v1680968621966!5m2!1sen!2sin" width="300" height="200" style={{border:0, marginTop: '30px', marginLeft: '650px'}} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
