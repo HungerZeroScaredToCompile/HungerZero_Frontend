@@ -59,7 +59,7 @@ const UserHome = () => {
             </img>
 
             {/*profile icon */}
-            <img src={ellipse}>
+            <img className='h-4 w-4' src={ellipse}>
 
             </img>
        </div>
@@ -152,7 +152,7 @@ const UserHome = () => {
 
    
 
-        <b className="absolute top-[170px] left-[46px] text-[50px] flex font-playfair-display items-center w-[508px] h-[89px]">
+        <b className="absolute top-[190px] left-[46px] text-[50px] flex font-playfair-display items-center w-[508px] h-[89px]">
           Top NGOs
         </b>
         <br/>
