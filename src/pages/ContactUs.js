@@ -105,7 +105,7 @@ const ContactUs = () => {
         <div className="absolute top-[44px] left-[1096px] text-mini font-poppins text-gray-200 text-left flex items-center w-[110px]">
           Community
         </div>
-        <div className="absolute top-[44px] left-[1210px] text-mini font-poppins text-gray-200 text-left flex items-center w-[110px]">
+        <div className="absolute top-[44px] left-[1210px] text-mini font-poppins text-gray-200 text-left flex items-center w-[110px] text-seagreen-100 font-bold">
           Contact Us
         </div>
         <img

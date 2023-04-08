@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 import LandingPage from "./pages/LandingPage";
 import ContactUs from "./pages/ContactUs";
+import Community from "./pages/Community";
 import { useEffect } from "react";
 import { useState } from "react";
 
@@ -50,6 +51,7 @@ function App() {
     <Routes>
       <Route path="/" element={<LandingPage />} />
       <Route path="contact" element={<ContactUs />} />
+      <Route path="community" element={<Community />} />
     </Routes>
   );
 }
