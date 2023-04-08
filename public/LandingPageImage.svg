@@ -15,7 +15,7 @@
 <rect x="551" y="98" width="80" height="80" fill="#FFD502"/>
 <g filter="url(#filter0_d_21_361)">
 <path d="M571 80C571 63.4315 584.431 50 601 50H776C792.569 50 806 63.4315 806 80V232H571V80Z" fill="white"/>
-<path d="M571 224H806V224C806 260.451 776.451 290 740 290H571V224Z" fill="white"/>
+<path d="M571 224H806C806 260.451 776.451 290 740 290H571V224Z" fill="white"/>
 </g>
 <rect x="591" y="70" width="205" height="162" rx="20" fill="url(#pattern1)"/>
 <circle cx="689" cy="240" r="26.5" fill="white" stroke="#FFD502" stroke-width="7"/>
@@ -46,7 +46,7 @@
 </g>
 <g filter="url(#filter7_d_21_361)">
 <path d="M50 428C50 411.431 63.4315 398 80 398H255C271.569 398 285 411.431 285 428V580H50V428Z" fill="white"/>
-<path d="M50 572H285V638H116C79.5492 638 50 608.451 50 572V572Z" fill="white"/>
+<path d="M50 572H285V638H116C79.5492 638 50 608.451 50 572Z" fill="white"/>
 </g>
 <rect x="70" y="418" width="205" height="162" rx="20" fill="url(#pattern5)"/>
 <circle cx="168" cy="588" r="26.5" fill="white" stroke="#FFD502" stroke-width="7"/>

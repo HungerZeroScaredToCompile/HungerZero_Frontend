@@ -50,21 +50,18 @@ const LandingPage = () => {
         </span>
       </div>
       <div className="absolute top-[445px] left-[360px] box-border w-0.5 h-[92px] border-r-[2px] border-solid border-silver" />
-      <div className="absolute top-[586px] left-[124px] rounded-3xs bg-seagreen-100 shadow-[0px_0px_8px_2px_rgba(6,_144,_111,_0.5)] w-[225px] h-[52px]" />
-      <b className="absolute top-[602px] left-[122px] text-base flex font-kumbh-sans text-whitesmoke-100 text-center items-center justify-center w-[229px]">
+      <button className="absolute top-[586px] left-[124px] z-10 rounded-3xs bg-seagreen-100 shadow-[0px_0px_8px_2px_rgba(6,_144,_111,_0.5)] w-[225px] h-[52px] text-base flex font-kumbh-sans text-whitesmoke-100 font-bold text-center items-center justify-center w-[229px] hover:cursor-pointer" >
+     
         Are you a donor?
-      </b>
+    </button>
       <button className="absolute top-[29px] left-[1069px] z-10 rounded-3xs bg-seagreen-100 shadow-[0px_0px_8px_2px_rgba(6,_144,_111,_0.5)] w-[165px] h-[52px] hover:cursor-pointer text-base flex font-kumbh-sans font-bold text-whitesmoke-100 text-center items-center justify-center w-[167px]">
   Donate Now
 </button>
 
+<button className="absolute top-[586px] left-[374px] z-10 rounded-3xs font-bold box-border w-[225px] h-[52px] border-[2px] border-solid border-seagreen-100 text-base flex font-kumbh-sans text-seagreen-100 text-center items-center justify-center w-[229px] hover:cursor-pointer bg-transparent">
+    Are you a NGO?
+</button>
 
-
-
-      <div className="absolute top-[586px] left-[374px] rounded-3xs box-border w-[225px] h-[52px] border-[2px] border-solid border-seagreen-100" />
-      <b className="absolute top-[602px] left-[372px] text-base flex font-kumbh-sans text-seagreen-100 text-center items-center justify-center w-[229px]">
-        Are you a NGO?
-      </b>
       <div className="absolute top-[2349px] left-[615px] text-3xl font-semibold font-inter text-white">
         Home
       </div>
@@ -83,11 +80,11 @@ const LandingPage = () => {
       <div className="absolute top-[2426px] left-[615px] leading-[33px] font-inter text-white inline-block w-[275px]">
         Testimonials
       </div>
-      <div className="absolute top-[2383px] left-[1013px] leading-[33px] font-inter text-white inline-block w-[275px]">
-        Email: hungerzero@gmail.com
+      <div className="absolute top-[2383px] left-[1013px] leading-[33px] font-inter text-white inline-block w-[350px]">
+        Email: hungerzero123@gmail.com
       </div>
       <div className="absolute top-[2421px] left-[1013px] leading-[33px] font-inter text-white inline-block w-[275px]">
-        Phone: 8888-8888-80
+        Phone: 9372022651
       </div>
       <div className="absolute top-[2383px] left-[796px] leading-[33px] font-inter text-white inline-block w-[275px]">
         Volunteer
@@ -622,7 +619,7 @@ const LandingPage = () => {
         <img
           className="absolute h-[1.92%] w-[1.18%] top-[89.3%] right-[10.07%] bottom-[8.77%] left-[88.75%] max-w-full overflow-hidden max-h-full"
           alt=""
-          src="/vector.svg"
+          src="/vector1.svg"
         />
       </div>
       <div className="absolute top-[1542px] left-[0px] bg-whitesmoke-100 w-[1520px] h-[710px] overflow-hidden text-base text-darkslateblue-100">

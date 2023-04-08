@@ -5,6 +5,7 @@ import {
   useLocation,
 } from "react-router-dom";
 import LandingPage from "./pages/LandingPage";
+import ContactUs from "./pages/ContactUs";
 import { useEffect } from "react";
 import { useState } from "react";
 
@@ -48,6 +49,7 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<LandingPage />} />
+      <Route path="contact" element={<ContactUs />} />
     </Routes>
   );
 }
