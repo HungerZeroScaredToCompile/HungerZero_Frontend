@@ -11,6 +11,8 @@ import Donations from "./pages/Donations";
 import UserProfile from "./pages/UserProfile";
 import Reward from "./pages/Reward";
 import NGOFeedback from "./pages/NGOFeedback";
+import NotificationUser from "./pages/NotificationUser";
+import NotificationNgo from "./pages/NotificationNgo";
 import { useEffect } from "react";
 import { useState } from "react";
 
@@ -60,7 +62,10 @@ function App() {
       <Route
        path="userprofile" element={<UserProfile />} />
        <Route path="reward" element={<Reward />} />
-       <Route path="feedback" element={<NGOFeedback />} />
+       <Route
+        path="feedback" element={<NGOFeedback />} />
+         <Route path="notificationuser" element={<NotificationUser/>} />
+         <Route path="notificationngo" element={<NotificationNgo/>} />
     </Routes>
   );
 }
