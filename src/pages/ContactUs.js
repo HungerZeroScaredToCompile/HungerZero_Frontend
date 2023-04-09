@@ -1,5 +1,6 @@
 import { TextField } from "@mui/material";
 import React,{ useState } from 'react';
+import {Link} from "react-router-dom";
 
 
 
@@ -99,23 +100,23 @@ const ContactUs = () => {
         <div className="absolute top-[40px] left-[115px] text-5xl font-kumbh-sans text-gray-200 text-left flex items-center w-[234px]">
           HungerZero
         </div>
-        <div className="absolute top-[44px] left-[984px] text-mini font-poppins text-black text-left flex items-center w-[110px]">
+        <Link to={"/userhome/donations"}>  <div className="absolute top-[44px] left-[984px] text-mini font-poppins text-black text-left flex items-center w-[110px]">
           Donation
-        </div>
-        <div className="absolute top-[44px] left-[1096px] text-mini font-poppins text-gray-200 text-left flex items-center w-[110px]">
+        </div></Link>  
+        <Link to={"/userhome/community"} ><div className="absolute top-[44px] left-[1096px] text-mini font-poppins text-gray-200 text-left flex items-center w-[110px]">
           Community
-        </div>
+        </div></Link>  
         <div className="absolute top-[44px] left-[1210px] text-mini font-poppins text-gray-200 text-left flex items-center w-[110px] text-seagreen-100 font-bold">
           Contact Us
         </div>
-        <img
+        <Link to={"/userprofile"} ><img
           className="absolute top-[30px] left-[1415px] w-[52px] h-[52px] object-cover"
           alt=""
           src="/ellipse1@2x.png"
-        />
-        <div className="absolute top-[44px] left-[892px] text-mini font-poppins text-gray-200 text-left flex items-center w-[55px]">
+        /></Link>  
+    <Link to={"/userhome"} >   <div className="absolute top-[44px] left-[892px] text-mini font-poppins text-gray-200 text-left flex items-center w-[55px]">
           Home
-        </div>
+        </div></Link>  
         <img
           className="absolute h-[23.15%] w-[1.64%] top-[38.85%] right-[9.34%] bottom-[38%] left-[89.01%] max-w-full overflow-hidden max-h-full"
           alt=""

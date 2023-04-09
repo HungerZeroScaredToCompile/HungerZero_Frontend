@@ -1,4 +1,5 @@
 import React, {useEffect, useContext, useState} from 'react';
+import {Link} from 'react-router-dom'
 import { useParams } from "react-router-dom";
 import { LoginContext } from '../Contexts/LoginContext';
 import axios from 'axios';
@@ -148,23 +149,23 @@ const UserProfile = () => {
           <div className="absolute top-[40px] left-[115px] text-5xl font-kumbh-sans text-gray-200 text-left flex items-center w-[234px]">
             HungerZero
           </div>
-          <div className="absolute top-[44px] left-[984px] text-mini font-poppins text-gray-200 text-left flex items-center w-[110px]">
+      <Link to={"donations"}  ><div className="absolute top-[44px] left-[984px] text-mini font-poppins text-gray-200 text-left flex items-center w-[110px]">
             Donation
-          </div>
-          <div className="absolute top-[44px] left-[1096px] text-mini font-poppins text-gray-200 text-left flex items-center w-[110px]">
+          </div></Link>  
+         <Link to={"community"} ><div className="absolute top-[44px] left-[1096px] text-mini font-poppins text-gray-200 text-left flex items-center w-[110px]">
             Community
-          </div>
-          <div className="absolute top-[44px] left-[1210px] text-mini font-poppins text-gray-200 text-left flex items-center w-[110px]">
+          </div></Link>
+        <Link to={"contact"}><div className="absolute top-[44px] left-[1210px] text-mini font-poppins text-gray-200 text-left flex items-center w-[110px]">
             Contact Us
-          </div>
-          <img
+          </div></Link>  
+     <Link to={"/userprofile"}  ><img
             className="absolute top-[30px] left-[1415px] w-[52px] h-[52px] object-cover"
             alt=""
             src="/ellipse1@2x.png"
-          />
-          <div className="absolute top-[44px] left-[892px] text-mini font-poppins text-gray-200 text-left flex items-center w-[55px]">
+          /></Link>   
+     <Link to={"/userhome"}> <div className="absolute top-[44px] left-[892px] text-mini font-poppins text-gray-200 text-left flex items-center w-[55px]">
             Home
-          </div>
+          </div></Link>    
           <img
             className="absolute h-[23.15%] w-[1.64%] top-[38.85%] right-[9.34%] bottom-[38%] left-[89.01%] max-w-full overflow-hidden max-h-full"
             alt=""
@@ -172,10 +173,10 @@ const UserProfile = () => {
           />
         </nav>
         <div className="absolute top-[1155px] left-[105px] rounded-xl bg-seagreen-100 w-[260px] h-[35px]" />
-        <b className="absolute top-[1166px] left-[103px] text-base flex font-kumbh-sans text-whitesmoke-100 text-center items-center justify-center w-[264px] h-[13px]">
+   <Link to={"/calendar"}> <b className="absolute top-[1166px] left-[103px] text-base flex font-kumbh-sans text-whitesmoke-100 text-center items-center justify-center w-[264px] h-[13px]">
           Go To Calendar
-        </b>
-        <img
+        </b></Link>    
+       <img
           className="absolute h-[1.21%] w-[1.18%] top-[88.39%] right-[76.97%] bottom-[10.39%] left-[21.84%] max-w-full overflow-hidden max-h-full"
           alt=""
           src="/vector1.svg"

@@ -22,9 +22,13 @@ import NgoLogin from "./pages/NgoLogin";
 import NgoRegister from "./pages/NgoRegister";
 import PrivateRoute from "./pages/PrivateRoute";
 import NgoHome from "./pages/NgoHome";
+import NGOProfileUser from "./pages/NGOProfileUser";
+import Analysis from "./pages/Ananlysis";
+import UserMap from "./pages/UserMap";
 import { useEffect } from "react";
 import { useState } from "react";
 import { LoginContext } from "./Contexts/LoginContext";
+import Nutrition from "./pages/Nutrition";
 
 
 function App() {
@@ -74,29 +78,35 @@ function App() {
 
       <Route path={'/userregister'} element={<UserRegister/>}/>
       <Route path={'/userlogin'} element={<UserLogin/>}/>
+      <Route path={'/usermap'} element={<UserMap />}/>
      
       <Route path={'/ngoregister'} element={<NgoRegister/>}/>
       <Route path={'/ngologin'} element={<NgoLogin/>}/>
-
+      <Route path={'/analysis'} element={<Analysis />}/>
       <Route element={<PrivateRoute isLoggedIn={logged}/>}>
       <Route path={'/userhome'} element={<UserHome/>}/>
-        <Route path={'/ngohome'} element={<NgoHome/>}/>
-        <Route path={'/ngomaps'} element={<NgoMaps/>}/>
+      
+        
+        <Route path={'/userhome/ngoprofileuser'} element={<NGOProfileUser/>}/> 
         <Route path={'/calendar'} element={<Calendar/>}/>
-      <Route path="contact" element={<ContactUs />} />
-      <Route path="community" element={<Community />} />
-      <Route path="donations" element={<Donations />} />
+      <Route path="/userhome/contact" element={<ContactUs />} />
+      <Route path="/userhome/community" element={<Community />} />
+      <Route path="/userhome/donations" element={<Donations />} />
       <Route
        path={'/userprofile'} element={<UserProfile />} />
-       <Route path="reward" element={<Reward />} />
-       <Route
-        path="feedback" element={<NGOFeedback />} />
-         <Route path="notificationuser" element={<NotificationUser/>} />
+      
+         <Route path="/userhome/notificationuser" element={<NotificationUser/>} />
          <Route path="notificationngo" element={<NotificationNgo/>} />
           
       </Route>
-
+<Route path={'/ngohome'} element={<NgoHome/>}/>
+        <Route path={'/ngomaps'} element={<NgoMaps/>}/>
+        <Route path="reward" element={<Reward />} />
+        <Route path="/nutrition" element={<Nutrition />} />
+       <Route
+        path="/ngohome/feedback" element={<NGOFeedback />} />
     </Routes>
+    
     </LoginContext.Provider>
     
     

@@ -2,6 +2,7 @@ import React from "react";
 import { createRoot } from "react-dom/client";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+import { ChakraProvider, theme } from '@chakra-ui/react'
 import { BrowserRouter } from "react-router-dom";
 import "./global.css";
 
@@ -10,7 +11,10 @@ const root = createRoot(container);
 
 root.render(
   <BrowserRouter>
+
+
     <App />
+    
   </BrowserRouter>
 );
 

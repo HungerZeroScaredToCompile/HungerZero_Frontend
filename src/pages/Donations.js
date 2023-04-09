@@ -1,6 +1,45 @@
 import { TextField } from "@mui/material";
+import { Link } from "react-router-dom";
+import React, { useState } from 'react';
+import axios from 'axios';
 
 const Donations = () => {
+
+  const [user, setUser] = useState('');
+  const [grains, setGrains] = useState('');
+  const [cookedFood, setCookedFood] = useState('');
+  const [dal, setDal] = useState('');
+  const [quantity, setQuantity] = useState(0);
+  const [ngo, setNGO] = useState('');
+  const [chapatis, setChapatis] = useState('');
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    axios.post('http://127.0.0.1:8000/user/donations/', {
+      user: user,
+      grains: grains,
+      cooked_food: cookedFood,
+      quantity: quantity,
+      ngo: ngo,
+      dal: dal
+    })
+      .then(response => {
+        console.log(response.data);
+      })
+      .catch(error => {
+        console.log(error);
+      });
+
+    setUser('');
+    setDal('');
+    setGrains('');
+    setCookedFood('');
+    setQuantity(0);
+    setNGO('');
+    setChapatis('');
+  };
+
   return (
     <div className="relative bg-whitesmoke-100 w-full h-[1379px] overflow-hidden text-left text-5xl text-darkslateblue-100 font-poppins">
       <img
@@ -58,10 +97,12 @@ const Donations = () => {
         src="/-icon-circle-arrow-right.svg"
       />
       
-      <div className="absolute top-[1232px] left-[113px] rounded-xl bg-seagreen-100 w-[686px] h-[50px]" />
-      <b className="absolute top-[1247px] left-[108px] flex font-kumbh-sans text-whitesmoke-100 text-center items-center justify-center w-[691px] h-[18px]">
+      <form onSubmit={handleSubmit}>
+      <button type="submit" className="absolute top-[1232px] left-[113px] rounded-xl bg-seagreen-100 w-[686px] h-[50px] flex font-kumbh-sans text-whitesmoke-100 text-center items-center justify-center w-[691px] h-[18px]" >
+
         Submit
-      </b>
+      </button>
+
       <TextField
         className="[border:none] bg-[transparent] absolute top-[440px] left-[115px]"
         sx={{ width: 684 }}
@@ -71,6 +112,7 @@ const Donations = () => {
         label="Name of NGO"
         size="medium"
         margin="none"
+        value={ngo} onChange={(event) => setNGO(event.target.value)} 
       />
       <TextField
         className="[border:none] bg-[transparent] absolute top-[350px] left-[-570px]"
@@ -81,6 +123,7 @@ const Donations = () => {
         label="Your Name"
         size="medium"
         margin="none"
+        value={user} onChange={(event) => setUser(event.target.value)} 
       />
       <TextField
         className="[border:none] bg-[transparent] absolute top-[540px] left-[115px]"
@@ -91,6 +134,7 @@ const Donations = () => {
         label="Number of Chapattis"
         size="medium"
         margin="none"
+        value={chapatis} onChange={(event) => setChapatis(event.target.value)}
       />
       <TextField
         className="[border:none] bg-[transparent] absolute top-[630px] left-[-570px]"
@@ -101,6 +145,7 @@ const Donations = () => {
         label="Quantity (kg) of Sabzi"
         size="medium"
         margin="none"
+        value={cookedFood} onChange={(event) => setCookedFood(event.target.value)}
       />
       <TextField
         className="[border:none] bg-[transparent] absolute top-[670px] left-[115px]"
@@ -111,6 +156,7 @@ const Donations = () => {
         label="Quantity (kg) of Rice"
         size="medium"
         margin="none"
+        value={grains} onChange={(event) => setGrains(event.target.value)}
       />
       <TextField
         className="[border:none] bg-[transparent] absolute top-[770px] left-[-570px]"
@@ -121,6 +167,7 @@ const Donations = () => {
         label="Quantity (kg) of Dal"
         size="medium"
         margin="none"
+        value={dal} onChange={(event) => setDal(event.target.value)}
       />
       <TextField
         className="[border:none] bg-[transparent] absolute top-[820px] left-[115px]"
@@ -132,6 +179,8 @@ const Donations = () => {
         size="medium"
         margin="none"
       />
+      </form>
+      
       <nav
         className="absolute top-[0px] left-[0px] w-[1520px] h-28 overflow-hidden"
         id="navbar"
@@ -144,28 +193,28 @@ const Donations = () => {
         <div className="absolute top-[40px] left-[115px] text-5xl font-kumbh-sans text-gray-200 text-left flex items-center w-[234px]">
           HungerZero
         </div>
-        <b className="absolute top-[44px] left-[984px] text-mini flex font-poppins text-seagreen-100 text-left items-center w-[110px]">
+      <Link to={"/userhome/donations"}><b className="absolute top-[44px] left-[984px] text-mini flex font-poppins text-seagreen-100 text-left items-center w-[110px]">
           Donation
-        </b>
-        <div className="absolute top-[44px] left-[1096px] text-mini font-poppins text-gray-200 text-left flex items-center w-[110px]">
+        </b></Link>  
+     <Link to={"/userhome/community"}><div className="absolute top-[44px] left-[1096px] text-mini font-poppins text-gray-200 text-left flex items-center w-[110px]">
           Community
-        </div>
-        <div className="absolute top-[44px] left-[1210px] text-mini font-poppins text-gray-200 text-left flex items-center w-[110px]">
+        </div></Link>   
+       <Link to={"/userhome/contact"}><div className="absolute top-[44px] left-[1210px] text-mini font-poppins text-gray-200 text-left flex items-center w-[110px]">
           Contact Us
-        </div>
-        <img
+        </div></Link> 
+       <Link to={"/userprofile"} ><img
           className="absolute top-[30px] left-[1415px] w-[52px] h-[52px] object-cover"
           alt=""
           src="/ellipse1@2x.png"
-        />
-        <div className="absolute top-[44px] left-[892px] text-mini font-poppins text-gray-200 text-left flex items-center w-[55px]">
+        /></Link>
+       <Link to={"/userhome"}><div className="absolute top-[44px] left-[892px] text-mini font-poppins text-gray-200 text-left flex items-center w-[55px]">
           Home
-        </div>
-        <img
+        </div></Link> 
+      <Link to={"/userhome/notificationuser"}> <img
           className="absolute h-[23.15%] w-[1.64%] top-[38.85%] right-[9.34%] bottom-[38%] left-[89.01%] max-w-full overflow-hidden max-h-full"
           alt=""
           src="/vector.svg"
-        />
+        /></Link> 
       </nav>
     </div>
   );

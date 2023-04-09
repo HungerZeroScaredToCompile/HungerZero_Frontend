@@ -1,4 +1,5 @@
 import React, { useState,useRef }  from 'react';
+import { Link } from 'react-router-dom';
 const Community = () => {
    
     const fileInputRef = useRef(null);
@@ -32,28 +33,28 @@ const Community = () => {
           <div className="absolute top-[40px] left-[115px] text-5xl font-kumbh-sans text-gray-200 text-left flex items-center w-[234px]">
             HungerZero
           </div>
-          <div className="absolute top-[44px] left-[984px] text-mini font-poppins text-black text-left flex items-center w-[110px]">
+        <Link to={"/userhome/donations"} > <div className="absolute top-[44px] left-[984px] text-mini font-poppins text-black text-left flex items-center w-[110px]">
             Donation
-          </div>
-          <b className="absolute top-[44px] left-[1096px] text-mini flex font-poppins text-seagreen-100 text-left items-center w-[110px]">
+          </div></Link>
+          <Link to={"/userhome/community"} > <b className="absolute top-[44px] left-[1096px] text-mini flex font-poppins text-seagreen-100 text-left items-center w-[110px]">
             Community
-          </b>
-          <div className="absolute top-[44px] left-[1210px] text-mini font-poppins text-gray-200 text-left flex items-center w-[110px]">
+          </b></Link> 
+          <Link to={"/userhome/contact"} ><div className="absolute top-[44px] left-[1210px] text-mini font-poppins text-gray-200 text-left flex items-center w-[110px]">
             Contact Us
-          </div>
-          <img
+          </div></Link>
+         <Link to={"/userprofile"}><img
             className="absolute top-[30px] left-[1415px] w-[52px] h-[52px] object-cover"
             alt=""
             src="/ellipse1@2x.png"
-          />
-          <div className="absolute top-[44px] left-[892px] text-mini font-poppins text-gray-200 text-left flex items-center w-[55px]">
+          /></Link> 
+    <Link to={"/userhome"}  ><div className="absolute top-[44px] left-[892px] text-mini font-poppins text-gray-200 text-left flex items-center w-[55px]">
             Home
-          </div>
-          <img
+          </div></Link>    
+        <Link to={"/userhome/notificationuser"}><img
             className="absolute h-[23.15%] w-[1.64%] top-[38.85%] right-[9.34%] bottom-[38%] left-[89.01%] max-w-full overflow-hidden max-h-full"
             alt=""
             src="/vector.svg"
-          />
+          /></Link>  
         </nav>
         <b className="absolute top-[189px] left-[57px] text-45xl flex font-playfair-display text-seagreen-100 items-center w-[508px] h-[89px]" style={{fontSize: "50px"}}>
           Explore
