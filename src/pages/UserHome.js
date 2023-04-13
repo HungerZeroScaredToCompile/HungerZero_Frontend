@@ -67,6 +67,7 @@ const UserHome = () => {
         className="absolute top-[0px] left-[0px] w-[1520px] h-28 overflow-hidden"
         id="navbar"
       >
+      
         <img
           className="absolute top-[21px] left-[28px] w-20 h-[68.49px] object-cover"
           alt=""
@@ -75,6 +76,7 @@ const UserHome = () => {
         <div className="absolute top-[40px] left-[115px] text-5xl font-kumbh-sans text-gray-200 text-left flex items-center w-[234px]">
           HungerZero
         </div>
+      <Link to={"/userhome/usermap"}><button className='w-21 ml-[750px] mt-[45px] rounded-lg bg-seagreen-100 h-6 text-white'>See Nearby NGOs</button></Link>  
       <Link to={"/userhome/donations"}><div className="absolute top-[44px] left-[984px] text-mini font-poppins text-gray-200 text-left flex items-center w-[110px]">
           Donation
         </div></Link>  

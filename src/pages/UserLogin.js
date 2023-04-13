@@ -46,12 +46,12 @@ const UserLogin = () => {
           localStorage.setItem("accesstoken", response.data.access)
           localStorage.setItem("refreshtoken", response.data.refresh)
           setLogged(true)
-          navigate('/ngohome')
+          navigate('/userhome')
         })
         .catch((error) => {
           console.log(error);
           alert('The username or password entered is wrong')
-          navigate('/ngohome')
+          navigate('/userhome')
         });
 
     }
