@@ -94,11 +94,11 @@ function App() {
       <Route path="/userhome/donations" element={<Donations />} />
       <Route
        path={'/userprofile'} element={<UserProfile />} />
-      
+
          <Route path="/userhome/notificationuser" element={<NotificationUser/>} />
          <Route path="notificationngo" element={<NotificationNgo/>} />
-          
-      </Route>
+         
+</Route>
 <Route path={'/ngohome'} element={<NgoHome/>}/>
         <Route path={'/ngomaps'} element={<NgoMaps/>}/>
         <Route path="reward" element={<Reward />} />
