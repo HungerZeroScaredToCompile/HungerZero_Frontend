@@ -78,14 +78,14 @@ function App() {
 
       <Route path={'/userregister'} element={<UserRegister/>}/>
       <Route path={'/userlogin'} element={<UserLogin/>}/>
-      <Route path={'/usermap'} element={<UserMap />}/>
+      
      
       <Route path={'/ngoregister'} element={<NgoRegister/>}/>
       <Route path={'/ngologin'} element={<NgoLogin/>}/>
       <Route path={'/analysis'} element={<Analysis />}/>
       <Route element={<PrivateRoute isLoggedIn={logged}/>}>
       <Route path={'/userhome'} element={<UserHome/>}/>
-      
+      <Route path={'/userhome/usermap'} element={<UserMap />}/>
         
         <Route path={'/userhome/ngoprofileuser'} element={<NGOProfileUser/>}/> 
         <Route path={'/calendar'} element={<Calendar/>}/>
