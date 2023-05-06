@@ -98,7 +98,7 @@ function App() {
          <Route path="/userhome/notificationuser" element={<NotificationUser/>} />
          <Route path="notificationngo" element={<NotificationNgo/>} />
          
-</Route>
+
 <Route path={'/ngohome'} element={<NgoHome/>}/>
         <Route path={'/ngomaps'} element={<NgoMaps/>}/>
         <Route path="reward" element={<Reward />} />
