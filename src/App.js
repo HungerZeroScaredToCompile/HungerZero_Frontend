@@ -83,7 +83,7 @@ function App() {
       <Route path={'/ngoregister'} element={<NgoRegister/>}/>
       <Route path={'/ngologin'} element={<NgoLogin/>}/>
       <Route path={'/analysis'} element={<Analysis />}/>
-      <Route element={<PrivateRoute isLoggedIn={logged}/>}>
+     
       <Route path={'/userhome'} element={<UserHome/>}/>
       <Route path={'/userhome/usermap'} element={<UserMap />}/>
         
