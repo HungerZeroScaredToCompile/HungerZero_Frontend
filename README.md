@@ -5,7 +5,7 @@
 
 In the context of charitable donations, both donors and recipients face distinct challenges that hinder the effectiveness and satisfaction of the donation process. Preliminary user research, comprising a comprehensive survey conducted via Google Forms and in-depth offline interviews, has revealed significant pain points for both groups. Donors often encounter difficulties in identifying trustworthy organizations, understanding the impact of their contributions, and navigating the donation process efficiently. Meanwhile, recipients face barriers in accessing resources, experiencing delays in receiving aid, and dealing with a lack of transparency regarding how donations are allocated. This research aims to systematically identify and analyze these pain points to develop tailored solutions that enhance the donation experience for both donors and recipients, ultimately fostering a more effective and transparent charitable ecosystem.
 
-![image](https://github.com/aasmithadhani/Myntra-CoDivas/blob/main/Application%20screenshots/problem%20statement.png)
+![image](https://github.com/HungerZeroScaredToCompile/HungerZero_Frontend/blob/main/hungerzero.png)
 
   Note: Please ensure you have installed <code><a href="https://nodejs.org/en/download/">nodejs</a></code>
 
